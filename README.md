@@ -1,4 +1,4 @@
-# Cal-vin: Your Intelligent Manual Assistant
+# Cal-vin: Your Calibration & Repair Assistant
 
 Calvin is a state-of-the-art application designed to assist users in finding relevant information from technical manuals. Whether you're looking for calibration instructions, setup procedures, or troubleshooting steps, Calvin is here to help.
 
