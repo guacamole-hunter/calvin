@@ -20,7 +20,9 @@ NON_INSTRUCTIONAL_KEYWORDS = [
     "revision history", "confidential", "proprietary", "legal notice"
 ]
 
-RELEVANT_KEYWORDS = ["calibration", "repair", "servicing", "maintenance", "adjustment", "fix","service"]
+RELEVANT_KEYWORDS = ["calibration", "repair", "servicing", "maintenance", "adjustment", "fix","service",
+                     "Mhz", "Ghz", "voltage", "VSWR", "proceedure", "service", "potentiometers", "fuse",
+                     ]
 
 class ManualModel:
     def __init__(self):
@@ -69,7 +71,7 @@ class ManualModel:
             # Boosting score based on relevant keywords
             for keyword in RELEVANT_KEYWORDS:
                 if keyword in paragraphs[idx].lower():
-                    similarity += 0.05  # Boosting score by 0.05 for each keyword, adjust as needed
+                    similarity += 0.15  # Boosting score by 0.05 for each keyword, adjust as needed
 
             scores.append((similarity, idx))
 
@@ -84,7 +86,7 @@ class ManualModel:
         sorted_scores = sorted(scores, reverse=True, key=lambda x: x[0])
 
         # Take the top 5 paragraphs
-        top_paragraphs = sorted_scores[:5]
+        top_paragraphs = sorted_scores[:10]
         print(top_paragraphs)
 
         for score, idx in top_paragraphs:
