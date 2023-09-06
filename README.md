@@ -59,7 +59,7 @@ Calvin is a state-of-the-art application designed to assist users in finding rel
 
 ### Usage
 
-1. **Upload Manuals**: Before asking questions, ensure you've uploaded the relevant manuals. Calvin will process and index them for searching.
+1. **Upload Manuals**: Before asking questions, ensure you've included the relevant manuals in the root folder with correct file structure. Calvin will process and index them for searching.
 2. **Ask Away**: Type in your question in the provided text box and hit "Send". Calvin will search through the manuals and provide you with instructions based on the most relevant information.
 
 ## Support
