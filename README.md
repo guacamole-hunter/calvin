@@ -20,7 +20,7 @@ Calvin is a state-of-the-art application designed to assist users in finding rel
 
 ### Prerequisites
 
-- Python 3.8 or higher
+- Python 3.10 or higher
 - Redis server
 - Docker
 - Tesseract https://github.com/UB-Mannheim/tesseract/wiki
