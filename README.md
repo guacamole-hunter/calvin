@@ -1,8 +1,4 @@
-Certainly! Here's a README for "Calvin", the application we've been working on:
-
----
-
-# Calvin: Your Intelligent Manual Assistant
+# Cal-vin: Your Intelligent Manual Assistant
 
 Calvin is a state-of-the-art application designed to assist users in finding relevant information from technical manuals. Whether you're looking for calibration instructions, setup procedures, or troubleshooting steps, Calvin is here to help.
 
@@ -26,6 +22,7 @@ Calvin is a state-of-the-art application designed to assist users in finding rel
 
 - Python 3.8 or higher
 - Redis server
+- Docker
 
 ### Installation
 
@@ -63,7 +60,7 @@ Calvin is a state-of-the-art application designed to assist users in finding rel
 ### Usage
 
 1. **Upload Manuals**: Before asking questions, ensure you've uploaded the relevant manuals. Calvin will process and index them for searching.
-2. **Ask Away**: Type in your question in the provided text box and hit "Search". Calvin will search through the manuals and provide you with the most relevant information.
+2. **Ask Away**: Type in your question in the provided text box and hit "Send". Calvin will search through the manuals and provide you with instructions based on the most relevant information.
 
 ## Support
 
@@ -77,6 +74,3 @@ We welcome contributions! If you'd like to improve Calvin, please fork the repos
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
----
-
-Note: Make sure to replace `yourusername` with your actual GitHub username in the URLs. Adjust any other details as necessary to fit your specific setup or preferences.
