@@ -35,7 +35,7 @@ def send_message():
 
 if __name__ == '__main__':
     app.run(debug=True)
-
+# for docker use uncomment below
 #if __name__ == '__main__':
-#    app.run(host='0.0.0.0', port=5000)
+#    app.run(host='0.0.0.0', port=5000, debug=True)
 
