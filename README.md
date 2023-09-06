@@ -37,13 +37,14 @@ Calvin is a state-of-the-art application designed to assist users in finding rel
    ```
    python -m venv venv
    source venv/bin/activate  # On Windows, use `venv\Scripts\activate`
-   #install spacy
-   python -m spacy download en_core_web_sm
    ```
 
 3. **Install Dependencies**:
    ```
    pip install -r requirements.txt
+   #install spacy
+   python -m spacy download en_core_web_sm
+   # also please install tesseract from link above if on os other than windows please download the right version accordingly
    ```
 
 4. **Start Redis Server**:
