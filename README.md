@@ -23,6 +23,7 @@ Calvin is a state-of-the-art application designed to assist users in finding rel
 - Python 3.8 or higher
 - Redis server
 - Docker
+- Tesseract https://github.com/UB-Mannheim/tesseract/wiki
 
 ### Installation
 
@@ -36,6 +37,8 @@ Calvin is a state-of-the-art application designed to assist users in finding rel
    ```
    python -m venv venv
    source venv/bin/activate  # On Windows, use `venv\Scripts\activate`
+   #install spacy
+   python -m spacy download en_core_web_sm
    ```
 
 3. **Install Dependencies**:
