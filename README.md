@@ -16,9 +16,25 @@ Calvin is a state-of-the-art application designed to assist users in finding rel
 3. **Semantic Search**: When a user asks a question, Calvin computes the relevance of each section in the manuals to the query. It then presents the most relevant sections to the user.
 4. **AI-Powered Responses**: Calvin uses OpenAI's GPT model to generate human-like responses, making the interaction smooth and intuitive.
 
-## Getting Started
+## Getting Started (w/docker)
 
-### Prerequisites
+1.**Build the image**:
+```
+docker-compose build
+```
+2.**Spin it up**:
+```
+docker-compose up
+```
+3. **Remove containers**
+```
+docker-compose down
+```
+
+### Prerequisites to use locally
+
+**uncomment sections from app.py and pdf_processor.py
+change redis to localhost in .env**
 
 - Python 3.10 or higher
 - Redis server
