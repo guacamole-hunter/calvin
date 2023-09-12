@@ -12,9 +12,9 @@ import joblib
 # Connect to Redis
 try:
     # for local use
-    redis_db = redis.StrictRedis(host='localhost', port=6379, db=0)
+    #redis_db = redis.StrictRedis(host='localhost', port=6379, db=0)
     # when using with docker
-    # redis_db = redis.StrictRedis(host='redis', port=6369, db=0)
+    redis_db = redis.StrictRedis(host='redis', port=6379, db=0)
     print("Successfully connected to Redis.")
 except redis.ConnectionError:
     print("Error: Unable to connect to Redis.")
