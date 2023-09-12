@@ -18,14 +18,18 @@ Calvin is a state-of-the-art application designed to assist users in finding rel
 
 ## Getting Started (w/docker)
 
+Set up manuals to be processed in structure ./Manuals/Manufacturer/Model/model.pdf
+
 1.**Build the image**:
 ```
 docker-compose build
 ```
+
 2.**Spin it up**:
 ```
 docker-compose up
 ```
+
 3. **Remove containers**
 ```
 docker-compose down
