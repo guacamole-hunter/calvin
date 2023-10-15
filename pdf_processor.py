@@ -11,10 +11,7 @@ import joblib
 
 # Connect to Redis
 try:
-    # for local use
-    redis_db = redis.StrictRedis(host='localhost', port=6379, db=0)
-    # when using with docker
-    # redis_db = redis.StrictRedis(host='redis', port=6369, db=0)
+    redis_db = redis.StrictRedis(host='redis', port=6379, db=0)
     print("Successfully connected to Redis.")
 except redis.ConnectionError:
     print("Error: Unable to connect to Redis.")
@@ -24,19 +21,27 @@ vectorizer = TfidfVectorizer()
 VECTOR_FILE = "vectorizer.pkl"
 
 def extract_text_from_pdf(pdf_path):
-    with open(pdf_path, 'rb') as pdf_file:
-        pdf = PdfReader(pdf_file)
-        content = ""
-        for page in pdf.pages:
-            content += page.extract_text()
-    return content
+    try:
+        with open(pdf_path, 'rb') as pdf_file:
+            pdf = PdfReader(pdf_file)
+            content = ""
+            for page in pdf.pages:
+                content += page.extract_text()
+        return content
+    except Exception as e:
+        print(f"Error extracting text from {pdf_path}: {e}")
+        return ""
 
 def extract_text_from_image(pdf_path):
-    images = convert_from_path(pdf_path)
-    content = ""
-    for image in images:
-        content += pytesseract.image_to_string(image)
-    return content
+    try:
+        images = convert_from_path(pdf_path)
+        content = ""
+        for image in images:
+            content += pytesseract.image_to_string(image)
+        return content
+    except Exception as e:
+        print(f"Error extracting text from image in {pdf_path}: {e}")
+        return ""
 
 # process pdfs
 def process_pdfs():

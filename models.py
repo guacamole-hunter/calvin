@@ -27,7 +27,7 @@ RELEVANT_KEYWORDS = ["calibration", "repair", "servicing", "maintenance", "adjus
 class ManualModel:
     def __init__(self):
         self.redis_db = redis.StrictRedis(
-            host=os.getenv('REDIS_HOST', 'localhost'),
+            host=os.getenv('REDIS_HOST', 'redis'),
             port=int(os.getenv('REDIS_PORT', 6379)),
             db=int(os.getenv('REDIS_DB', 0))
         )
